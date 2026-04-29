@@ -34,6 +34,29 @@ Dataset overview:
 
 Data period: December 2010 to December 2011.
 
+## Project Files
+
+| Path | Purpose |
+|---|---|
+| `src/rfm_segmentation.py` | Clean reproducible Python script for RFM calculation and segmentation |
+| `requirements.txt` | Python dependencies |
+| `outputs/` | Generated customer-level and segment-level outputs |
+| `screenshots/` | Exported visualizations |
+
+## How to Run
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+Run the segmentation script:
+
+```bash
+python src/rfm_segmentation.py
+```
+
 ## Methodology
 
 The analysis follows this workflow:
@@ -118,6 +141,19 @@ Initial segment groups:
 
 5. Add revenue share by segment.
    Segment size alone is not enough for campaign prioritization.
+
+## Code Quality Improvements
+
+The project now includes a reproducible script version of the analysis.
+
+The script:
+
+- separates loading, cleaning, RFM calculation, scoring, segmentation, and reporting into functions,
+- removes cancelled and invalid transactions,
+- creates customer-level RFM outputs,
+- creates segment-level summaries,
+- saves generated outputs into `outputs/`,
+- uses clear naming and typed function signatures.
 
 ## Limitations
 
